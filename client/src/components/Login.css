@@ -1,0 +1,110 @@
+.login-page {
+    font-family: Roboto;
+    background: #eaeaea;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+  
+  .login-header {
+    background: #fff;
+    padding: 10px;
+  }
+  
+  .login-nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  
+  .login-logo {
+    font-size: 30px;
+    margin-right: 20px;
+  }
+  
+  nav ul {
+    list-style: none;
+    display: flex;
+    margin: 0;
+    padding: 0;
+  }
+  
+  nav ul li {
+    margin: 0 10px;
+  }
+  
+  nav ul li a {
+    text-decoration: none;
+    color: #333;
+  }
+  
+  .login-btn {
+    padding: 8px 16px;
+    background: #788d8d;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  .login-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-grow: 1;
+    background: #788d8d;
+  }
+  
+  .login-form {
+    background: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+  }
+  
+  .login-input {
+    margin-bottom: 15px;
+  }
+  
+  .login-input label {
+    display: block;
+    margin-bottom: 5px;
+  }
+  
+  .login-input input {
+    width: 100%;
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+  }
+  
+  .login-buttons {
+    display: flex;
+    justify-content: space-between;
+  }
+  
+  .login-submit {
+    padding: 8px 16px;
+    background: #788d8d;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  .login-cancel {
+    padding: 8px 16px;
+    background: #ccc;
+    color: #333;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  .login-footer {
+    background: #fff;
+    text-align: center;
+    padding: 10px;
+  }
+  
