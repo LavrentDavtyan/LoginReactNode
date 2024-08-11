@@ -6,9 +6,7 @@ import './Main.css';
 
 export const Home = () => {
   const [menuOpen, setMenuOpen] = useState(false);
-  const [isAuthenticated, setAuthenticated] = useState(
-    Boolean(localStorage.getItem('token'))
-  );
+  const [isAuthenticated, setAuthenticated] = useState(Boolean(localStorage.getItem('token')));
   const navigate = useNavigate();
   const currentYear = new Date().getFullYear();
 
@@ -32,7 +30,7 @@ export const Home = () => {
             </div>
             <nav>
               <ul>
-                <li className='active'><Link to="/login">Home</Link></li>
+                <li className="active"><Link to="/login">Home</Link></li>
                 <li><Link to="#">Contact</Link></li>
                 <li><Link to="#">About</Link></li>
                 {isAuthenticated && <li><Link to="/profile">Profile</Link></li>}
@@ -66,7 +64,7 @@ export const Home = () => {
           {menuOpen && (
             <nav className="mobile-menu">
               <ul>
-                <li className='active'><Link to="/">Home</Link></li>
+                <li className="active"><Link to="/">Home</Link></li>
                 <li><Link to="#">Contact</Link></li>
                 <li><Link to="#">About</Link></li>
                 {isAuthenticated && <li><Link to="/profile">Profile</Link></li>}

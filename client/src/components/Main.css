@@ -87,11 +87,7 @@ nav ul li a {
 }
 
 .login-form {
-  background: #fff;
-  padding: 20px;
-  border-radius: 10px;
-  min-width: 300px;
-  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+  width: 200px;
 }
 
 .login-form  h2, label{
@@ -110,7 +106,7 @@ nav ul li a {
 .login-input input {
   width: 95%;
   padding: 8px;
-  border: 1px solid #ccc;
+  border: 1px solid #4A505D;
   border-radius: 5px;
 }
 
@@ -130,15 +126,14 @@ nav ul li a {
 
 .login-cancel {
   padding: 8px 16px;
-  background: #ccc;
-  color: #333;
-  border: none;
+  color: #4A505D;
+  border: 1px solid #4A505D;
   border-radius: 5px;
   cursor: pointer;
 }
 
 .footer {
-  background: black;
+  background: #4A505D;
   text-align: right;
   padding: 5px;
   color: #fff;
@@ -176,25 +171,12 @@ nav ul li a {
   .mobile-header{
      padding: 15px;
      display: block;
-    /* justify-content: space-between; */
 
   }
-
-  /* .header {
-    display: flex;
-
-
-  } */
 
   .mobile-icon {
     height: 30px;
     cursor: pointer;
-    /* display: block;
-    position: absolute;
-    left: 10px;
-    top: 10px;
-    height: 30px;
-    cursor: pointer; */
   }
 
   .mobile-menu {
@@ -205,7 +187,7 @@ nav ul li a {
     left: 0;
     width: 100%;
     background: #fff;
-    border-top: 1px solid #ccc;
+    border-top: 1px solid #4A505D;
     box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.1);
   }
 
@@ -217,12 +199,12 @@ nav ul li a {
 
   .mobile-menu ul li {
     padding: 10px;
-    border-bottom: 1px solid #ccc;
+    border-bottom: 1px solid #4A505D;
   }
 
   .mobile-menu ul li a {
     text-decoration: none;
-    color: #333;
+    color: #4A505D;
     display: block;
   }
 
@@ -232,3 +214,91 @@ nav ul li a {
   }
 }
 
+
+.login-page {
+  position: relative;
+  background-color: #5B6A5B;
+}
+
+.colored-div {
+  position: absolute;
+}
+
+.top-left {
+  top: 0px;
+  left: 0px;
+  height: 67%;
+  width: 40%;
+  background-color: #6C817E;
+}
+
+.top-right {
+  top: 0px;
+  right: 0px;
+  height: 33%;
+  width: 60%;
+  background-color: #935235;
+}
+
+.bottom-left {
+  bottom: 0px;
+  left: 0px;
+  height: 33%;
+  width: 60%;
+  background-color: #A0AAB5;
+}
+
+.bottom-right {
+  bottom: 0px;
+  right: 0px;
+  height: 67%;
+  width: 40%;
+  background-color: #D49B62;
+}
+
+.login-container {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  padding: 20px;
+  background-color: #ffffff;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.login-box {
+  width: 300px;
+}
+
+.input-group {
+  margin-bottom: 15px;
+}
+
+.input-group label {
+  display: block;
+  margin-bottom: 5px;
+  font-weight: bold;
+}
+
+.input-group input {
+  width: 100%;
+  padding: 8px;
+  border: 1px solid #4A505D;
+  border-radius: 4px;
+}
+
+.login-button {
+  width: 100%;
+  padding: 10px;
+  background-color: #007bff;
+  color: #ffffff;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+.login-button:hover {
+  background-color: #0056b3;
+}

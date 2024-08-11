@@ -6,7 +6,6 @@ const Login = () => {
   const [password, setPassword] = useState('');
   const [error, setError] = useState('');
   const [loading, setLoading] = useState(false);
-
   const navigate = useNavigate();
 
   const validateEmail = (email) => {
@@ -42,14 +41,15 @@ const Login = () => {
       if (!response.ok) {
         const errorData = await response.json();
         setError(errorData.message || 'Something went wrong!');
-      }
-
-      const data = await response.json();
-      console.log('Login successful', data);
+      } else {
+        const data = await response.json();
+      localStorage.setItem('token', data.accessToken);
       localStorage.setItem('token', data.accessToken);
       // setAuthenticated(true); // Set authentication status
-      navigate('/profile');
-
+        localStorage.setItem('token', data.accessToken);
+      // setAuthenticated(true); // Set authentication status
+        navigate('/profile');
+      }
     } catch (err) {
       setError(err.message);
     } finally {
@@ -59,6 +59,11 @@ const Login = () => {
 
   return (
     <div className="login-page">
+      <div className="colored-div top-left"></div>
+      <div className="colored-div top-right"></div>
+      <div className="colored-div center-div"></div>
+      <div className="colored-div bottom-left"></div>
+      <div className="colored-div bottom-right"></div>
       <div className="login-container">
         <form onSubmit={handleLogin} className="login-form">
           <h2>Login</h2>
