@@ -1,15 +1,49 @@
 
-First, run the development server:
 
-```bash
-# run node.js
-npm run dev
+### Installation
 
-# run react.js
-npm --prefix client run dev
+1. **Clone the repository**:
 
-# login and password for test
-# login
-email@example.com
-# password
-password123
+    ```bash
+    git clone https://github.com/your-username/your-repository.git
+    cd your-repository
+    ```
+
+2. **Install backend dependencies**:
+
+    ```bash
+    npm install
+    ```
+
+3. **Install frontend dependencies**:
+
+    ```bash
+    cd client
+    npm install
+    cd ..
+    ```
+
+### Running the Development Server
+
+To start the development servers for both the backend and frontend, follow these steps:
+
+1. **Open the first terminal** and run the backend server:
+
+    ```bash
+    npm run dev
+    ```
+
+2. **Open the second terminal** and run the frontend (React) server:
+
+    ```bash
+    npm --prefix client run dev
+    ```
+
+### Test Login Credentials
+
+Use the following credentials to log in:
+
+- **Email**: `email@example.com`
+- **Password**: `password123`
+
+

@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Outlet, Link, useNavigate } from 'react-router-dom';
+import { Outlet, Link, useNavigate, useLocation } from 'react-router-dom';
 import avatarLogo from '../assets/avatar.png';
 import mobileIcon from '../assets/mobileIcon.png';
 import './Main.css';
@@ -8,6 +8,7 @@ export const Home = () => {
   const [menuOpen, setMenuOpen] = useState(false);
   const [isAuthenticated, setAuthenticated] = useState(Boolean(localStorage.getItem('token')));
   const navigate = useNavigate();
+  const location = useLocation();
   const currentYear = new Date().getFullYear();
 
   const toggleMenu = () => {
@@ -20,6 +21,8 @@ export const Home = () => {
     navigate('/login');
   };
 
+  const isActive = (path) => location.pathname === path ? 'active' : '';
+
   return (
     <div>
       <header className="header">
@@ -30,10 +33,10 @@ export const Home = () => {
             </div>
             <nav>
               <ul>
-                <li className="active"><Link to="/login">Home</Link></li>
-                <li><Link to="#">Contact</Link></li>
-                <li><Link to="#">About</Link></li>
-                {isAuthenticated && <li><Link to="/profile">Profile</Link></li>}
+                <li className={isActive('/login')}><Link to="/login">Home</Link></li>
+                <li className={isActive('/contact')}><Link to="#">Contact</Link></li>
+                <li className={isActive('/about')}><Link to="#">About</Link></li>
+                {isAuthenticated && <li className={isActive('/profile')}><Link to="/profile">Profile</Link></li>}
               </ul>
             </nav>
           </div>
@@ -64,10 +67,10 @@ export const Home = () => {
           {menuOpen && (
             <nav className="mobile-menu">
               <ul>
-                <li className="active"><Link to="/">Home</Link></li>
-                <li><Link to="#">Contact</Link></li>
-                <li><Link to="#">About</Link></li>
-                {isAuthenticated && <li><Link to="/profile">Profile</Link></li>}
+                <li className={isActive('/login')}><Link to="/login">Home</Link></li>
+                <li className={isActive('/contact')}><Link to="#">Contact</Link></li>
+                <li className={isActive('/about')}><Link to="#">About</Link></li>
+                {isAuthenticated && <li className={isActive('/profile')}><Link to="/profile">Profile</Link></li>}
               </ul>
             </nav>
           )}

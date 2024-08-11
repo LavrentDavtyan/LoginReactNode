@@ -40,18 +40,14 @@ const Login = () => {
 
       if (!response.ok) {
         const errorData = await response.json();
-        setError(errorData.message || 'Something went wrong!');
+        // console.log(errorData.message)
       } else {
         const data = await response.json();
-      localStorage.setItem('token', data.accessToken);
-      localStorage.setItem('token', data.accessToken);
-      // setAuthenticated(true); // Set authentication status
         localStorage.setItem('token', data.accessToken);
-      // setAuthenticated(true); // Set authentication status
         navigate('/profile');
       }
     } catch (err) {
-      setError(err.message);
+      // console.log(err.message)
     } finally {
       setLoading(false);
     }
